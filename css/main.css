@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Pushster&family=Source+Sans+Pro:wght@700&display=swap');
+
+
+:root{
+    --maincolor:#E6F8F6;
+    --containercolour:#A0F6D2;
+    --allfontcolor:#5f4c4c;
+    --monthtitlecolor:#03414D;
+    --sunsatcolor:#9A0680;
+    --daycolor:#171717;
+    --hovercolor:#E6F8F6;
+    --hoverfontcolor:#03414D;
+
+    --allfont:'Source Sans Pro', sans-serif;
+    --monthtitlefont:'Pushster', cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--allfont);
+}
+body{
+    background-color: var(--maincolor);
+}
+
+.calendar{
+    padding: 20px 40px;
+    color: var(--allfontcolor);
+}
+
+.months-container{
+    justify-content: center;
+    gap:40px;
+}
+
+.calendar .months-container .month-container{
+    background: var(--containercolour);
+    padding: 20px;
+    min-width: 280px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 4px;
+
+}
+
+.calendar table.month th.month-title{
+    font-family: var(--monthtitlefont);
+    font-size: 30px;
+    color: var(--monthtitlecolor);
+}
+th.day-header{
+    color: var(--daycolor);
+    font-weight: 400;
+}
+/* td.day .day-content{
+    color: #fff;
+} */
+.calendar table.month td:first-child,
+.calendar table.month td:last-child,
+.calendar table.month thead tr:nth-child(2) th:first-child,
+.calendar table.month thead tr:nth-child(2) th:last-child
+{
+    color: var(--sunsatcolor)!important;
+}
+
+.calendar table.month td.day .day-content{
+    padding: 6px 10px;
+}
+table.month td.day .day-content:hover{
+    background:var(--hovercolor) ;
+    color: var(--hoverfontcolor);
+}
+
+.calendar .calendar-header{
+    border: none;
+}
+.calendar .calendar-header table th:hover{
+    background: transparent;
+}
+
+.calendar .calendar-header .year-title{
+    font-size: 4em;
+    color: var(--sunsatcolor);
+    font-family: var(--monthtitlefont);
+}
+
+.calendar .calendar-header .year-neighbor{
+    font-size: 2.25em;
+}
+.calendar .calendar-header .year-neighbor2{
+    font-size: 1.25em;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 10px;
+}
+
+.copyright a{
+    color: #DA0037  ;
+    text-decoration: none;
+    font-family: var(--monthtitlefont);
+}
+.copyright a:hover{
+    color: var(--hoverfontcolor);
+}
